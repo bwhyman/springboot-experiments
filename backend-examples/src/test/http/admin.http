@@ -1,0 +1,11 @@
+POST http://localhost:8080/api/admin/users
+Content-Type: application/json
+token: {{token}}
+{
+  "account": "1002",
+  "name": "SUN",
+  "role": "3Rgt"
+}
+###
+GET http://localhost:8080/api/admin/users/54605495961664
+token: {{token}}

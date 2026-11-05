@@ -1,0 +1,14 @@
+POST http://localhost:8080/api/open/login
+Content-Type: application/json
+
+{
+  "account": "admin",
+  "password": "admin"
+}
+###
+GET http://localhost:8080/api/admin/users
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOiI3SnlBIiwiaWF0IjoxNzkzNzA0MjY0LCJleHAiOjE3OTM3OTA2NjR9.d0JQU_lXBQn2P55TWQiVYcPeCMa1tpuUQ06KfbpF2xs
+
+###
+GET http://localhost:8080/api/user/info
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOiI3SnlBIiwiaWF0IjoxNzkzNzA0MjY0LCJleHAiOjE3OTM3OTA2NjR9.d0JQU_lXBQn2P55TWQiVYcPeCMa1tpuUQ06KfbpF2xs

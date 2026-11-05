@@ -1,0 +1,7 @@
+POST http://localhost:8080/api/user/addresses
+Content-Type: application/json
+token: {{token}}
+
+{
+  "detail": "1104"
+}

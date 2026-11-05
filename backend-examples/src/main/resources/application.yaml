@@ -1,0 +1,26 @@
+db-account: 2046204600 # 可声明变量多处引用，避免出错
+spring:
+  threads:
+    virtual:
+      enabled: true
+  jackson:
+    default-property-inclusion: non_null # 序列化时忽略空属性值
+  datasource:
+    url: 'jdbc:postgresql://120.46.159.231:5432/${db-account}'
+    username: ${db-account}
+    password: ${db-account}
+
+  sql:
+    init:
+      mode: always
+
+logging:
+  level:
+    root: warn
+    sql: debug
+    org.example: debug
+  pattern:
+    console: '%-5level %C.%M[%line] - %msg%n'
+
+my:
+  secretkey: R28K42ZEJ8LWRHU5
