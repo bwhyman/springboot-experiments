@@ -18,7 +18,6 @@ public interface UserMapper extends BaseMapper<User> {
 
     // select u.id as uid, a.id as aid,  from user_x u inner join address a on u.id=a.user_id
     // where u.id=54605495961664;
-
     default UserAddress findUserAddressesByUserId(long uid) {
         List<Row> rows = QueryChain.of(this)
                 .select("user_x.id as uid")
@@ -47,7 +46,6 @@ public interface UserMapper extends BaseMapper<User> {
                         .build())
                 .toList();
 
-
         return UserAddress.builder()
                 .user(user)
                 .addresses(addresses)
@@ -69,5 +67,20 @@ public interface UserMapper extends BaseMapper<User> {
         return  QueryChain.of(this)
                 .select("count(*)")
                 .oneAs(Long.class);
+    }
+
+    /**
+     * 分页获取全部用户。limit从0计算，但页数一般从1计算。
+     * @param pageNumber
+     * @param pageSize
+     * @return
+     */
+    default List<User> findByPage(int pageNumber, int pageSize) {
+        return QueryChain.of(this)
+                .select(UserTableDef.USER.DEFAULT_COLUMNS)
+                .from(UserTableDef.USER)
+                .limit(pageNumber - 1)
+                .offset((pageNumber - 1) * pageSize)
+                .list();
     }
 }

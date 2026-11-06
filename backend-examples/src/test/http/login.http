@@ -1,19 +1,9 @@
-### admin login
-POST localhost:8080/api/open/login
-Content-Type: application/json
-
-{
-  "account": "admin",
-  "password": "admin"
-}
-> {% client.global.set("token", response.headers.valueOf("token")) %}
-### user login
+### 错误登录账户密码
 POST localhost:8080/api/open/login
 Content-Type: application/json
 
 {
   "account": "1001",
-  "password": "1001"
+  "password": "sss"
 }
-> {% client.global.set("token", response.headers.valueOf("token")) %}
-###
+

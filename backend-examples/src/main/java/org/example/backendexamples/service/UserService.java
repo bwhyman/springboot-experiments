@@ -10,6 +10,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class UserService {
@@ -22,7 +24,6 @@ public class UserService {
         if (user == null || !passwordEncoder.matches(password, user.getPassword())) {
             return null;
         }
-
         return user;
     }
 
@@ -38,5 +39,9 @@ public class UserService {
 
     public UserAddress listUserAddresses(long uid) {
         return userMapper.findUserAddressesByUserId(uid);
+    }
+
+    public List<User> listUsers(int pageNumber, int pageSize) {
+        return userMapper.findByPage(pageNumber, pageSize);
     }
 }

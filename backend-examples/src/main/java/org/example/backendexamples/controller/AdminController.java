@@ -22,4 +22,9 @@ public class AdminController {
     public ResultVO getUserAddresses(@PathVariable long uid) {
         return ResultVO.success(userService.listUserAddresses(uid));
     }
+    //分页获取全部用户
+    @GetMapping("users/pages/{pnumber}/{psize}")
+    public ResultVO getUsers(@PathVariable int pnumber, @PathVariable int psize) {
+        return ResultVO.success(userService.listUsers(pnumber, psize));
+    }
 }

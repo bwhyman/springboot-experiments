@@ -28,7 +28,7 @@
     </scm>
     <properties>
         <java.version>25</java.version>
-        <mybatis-flex.version>1.11.7</mybatis-flex.version>
+        <mybatis-flex.version>1.11.8</mybatis-flex.version>
     </properties>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/com.auth0/java-jwt -->
