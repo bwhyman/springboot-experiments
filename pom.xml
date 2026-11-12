@@ -19,5 +19,6 @@
         <module>mybatisflex-examples</module>
         <module>springmvc-examples</module>
         <module>backend-examples</module>
+        <module>cache-examples</module>
     </modules>
 </project>

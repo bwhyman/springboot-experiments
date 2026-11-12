@@ -162,7 +162,6 @@ User DO 类，声明 USER/ADMIN 角色常量值；Address DO类。
 UserMapper 持久层组件，基于账号获取用户信息；基于账号更新密码；，单元测试。  
 AddressMapper组件，基于uid拉取信息。
 
-
 InitService 业务层组件，基于容器监听器实现管理员账号初始化。  
 UserService 业务层组件，基于账号获取用户，基于 uid 获取用户，更新指定 uid 密码，获取全部用户，添加用户，单元测试。  
 LoginController 控制层组件，登录。  
@@ -171,7 +170,7 @@ AdminController 控制层组件，添加用户，获取全部用户信息，重�
 LoginInterceptor 拦截器， AdminInterceptor 拦截器。  
 编写请求测试脚本。
 
-### 实验 Cache 缓存实验
+### 实验6 Cache 缓存实验
 
 **实验目的**  
 理解业务层缓存的作用与意义。  
@@ -181,12 +180,13 @@ LoginInterceptor 拦截器， AdminInterceptor 拦截器。
 掌握基本 SpEL 表达式使用方法。
 
 **实验内容**  
-创建 springboot 项目，添加 springmvc/cache 等实验依赖，声明启动缓存。  
+创建 springboot 项目，添加 springmvc等实验依赖，声明启动缓存。  
 创建测试 DTO 类；创建测试模拟持久层组件，实现基本获取更新操作。  
 创建业务组件，获取全部用户，获取指定用户，更新指定用户业务逻辑。  
-添加 spring-cache 缓存注解，对以上业务使用合适缓存策略。
+添加spring-cache依赖。  
+添加 spring-cache 缓存配置/注解，对以上业务使用合适缓存策略。
 
-### 实验 Redis 限流实验
+### 实验7 Redis 限流实验
 
 **实验目的**  
 理解非关系型数据库的特点及适用场景。  
